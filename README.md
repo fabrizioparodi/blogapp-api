@@ -1,7 +1,7 @@
 # blogapp-api
 ## Deployed on Heroku
 
-- https://blog-app-ee678.herokuapp.com/
+- https://blog-app-ee678.herokuapp.com/posts
 
 ## Notes
 ### Security
