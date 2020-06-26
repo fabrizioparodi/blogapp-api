@@ -1,30 +1,20 @@
-const service = require("../../services/postService");
+const request = require("supertest");
+const app = require("../../../app");
 
-describe("Post Service", () => {
-    it("should create the post", async () => {
+describe("Post Controller :: Creation", () => {
+    it("should failed the creation because do not have a token", async (done) => {
         try {
-            const post = {
-                title: 'TEST TITLE',
-                description: 'TEST DESCRIPTION',
-                createdBy: 'TEST_USER'
-            };
+            const res = await request(app)
+                .post('/posts/create')
+                .send({
+                    title: 'test title',
+                    description: 'test description'
+                });
 
-            const createdPost = await service.create(post);
-
-            expect(createdPost).toBeTruthy();
-            expect(createdPost.title).toEqual(post.title);
+            expect(res.statusCode).toEqual(401);
+            done();
         } catch (e) {
-        }
-    });
-    it("should NOT create the post", async () => {
-        try {
-            await service.create({
-                title: 'TEST TITLE',
-                description: 'TEST DESCRIPTION'
-            })
-        } catch (e) {
-            expect(e).toBeTruthy();
-            expect(e.message).toEqual('post validation failed: createdBy: Path `createdBy` is required.');
+            done.fail(e);
         }
     });
 });

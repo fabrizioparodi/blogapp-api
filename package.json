@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start-dev": "nodemon ./bin/www",
     "start": "node ./bin/www",
-    "deploy": "heroku deploy"
+    "deploy": "heroku deploy",
+    "test": "jest"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -21,6 +23,9 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@jest/globals": "^26.1.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }

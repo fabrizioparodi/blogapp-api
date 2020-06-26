@@ -12,11 +12,10 @@ firebase.initializeApp({
     projectId: "blog-app-ee678",
     storageBucket: "blog-app-ee678.appspot.com",
     messagingSenderId: "534437626017",
-    appId: "1:534437626017:web:fcde777a2a71d4887570e0",
-    measurementId: "G-7KTLYJQVPE"
+    appId: "1:534437626017:web:fcde777a2a71d4887570e0"
 })
 
-const postsRouter = require('./src/controllers/posts');
+const postsRouter = require('./src/controllers/postsController');
 
 const app = express();
 
