@@ -16,8 +16,7 @@ router.get('/', async (req, res, next) => {
 
 router.post('/create', [
         body('title').trim().notEmpty(),
-        body('description').trim().notEmpty(),
-        body('privacy').trim().notEmpty()
+        body('description').trim().notEmpty()
     ],
     async (req, res, next) => {
         try {
