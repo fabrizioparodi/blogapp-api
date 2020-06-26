@@ -16,7 +16,6 @@
     "express-validator": "^6.6.0",
     "firebase": "^7.15.5",
     "firebase-admin": "^8.12.1",
-    "firebaseui": "^4.5.1",
     "helmet": "^3.23.2",
     "mongodb-memory-server": "^6.6.1",
     "mongoose": "^5.9.20",
